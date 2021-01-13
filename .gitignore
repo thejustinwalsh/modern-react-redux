@@ -23,3 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 .eslintcache
+
+# gitsecret
+.gitsecret/keys/random_seed
+.env
