@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import Header from "./components/Header";
+import Route from "./components/Route";
 import Accordion from "./components/Accordion";
 import Dropdown from "./components/Dropdown";
 import Search from "./components/Search";
@@ -40,10 +42,24 @@ export default function App() {
 
   return (
     <div>
-      {/*<Accordion items={items} />*/}
-      {/*<Search />*/}
-      {/*<Dropdown selected={selected} onSelectedChange={setSelected} options={options} />*/}
-      <Translate />
+      <Header />
+      <Route path="/">
+        <Accordion items={items} />
+      </Route>
+      <Route path="/list">
+        <Search />
+      </Route>
+      <Route path="/dropdown">
+        <Dropdown
+          label="Select a color"
+          selected={selected}
+          onSelectedChange={setSelected}
+          options={options}
+        />
+      </Route>
+      <Route path="/translate">
+        <Translate />
+      </Route>
     </div>
   );
 }
