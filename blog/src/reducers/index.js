@@ -1,3 +1,9 @@
 import { combineReducers } from "redux";
 
-export default combineReducers({ hello: () => "👋" });
+import postsReducer from "./postsReducer";
+import usersReducer from "./usersReducer";
+
+export default combineReducers({
+  posts: postsReducer,
+  users: usersReducer,
+});
