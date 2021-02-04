@@ -19,11 +19,7 @@ export const fetchUser = (id) => async (dispatch) => {
 
 export const fetchPostsAndUsers = () => async (dispatch, getState) => {
   await dispatch(fetchPosts());
-  const userIds = Object.keys(
-    getState().posts.reduce((acc, { userId }) => {
-      return { ...acc, [userId]: userId };
-    }, {})
-  );
+  const userIds = getState().posts.reduce((acc, { userId }) => acc.add(userId), new Set());
   userIds.forEach((id) => dispatch(fetchUser(id)));
 };
 
