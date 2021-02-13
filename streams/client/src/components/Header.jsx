@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { GoogleAuth } from "./GoogleAuth";
+import GoogleAuth from "./GoogleAuth";
+
 export const Header = () => {
   return (
     <div className="ui secondary pointing menu">
@@ -10,6 +11,7 @@ export const Header = () => {
         <Link to="/" className="item">
           All Streams
         </Link>
+        <GoogleAuth className="item" />
       </div>
     </div>
   );
