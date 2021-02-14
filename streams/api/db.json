@@ -1,0 +1,32 @@
+{
+  "streams": [
+    {
+      "title": "Hello World",
+      "description": "Something here",
+      "id": 1
+    },
+    {
+      "title": "Once Again",
+      "description": "Have another",
+      "id": 2
+    },
+    {
+      "title": "This is My Stream",
+      "description": "Signed in when created",
+      "userId": "115826235484677362723",
+      "id": 3
+    },
+    {
+      "title": "Auto Route",
+      "description": "Routing somewhere else again",
+      "userId": "115826235484677362723",
+      "id": 4
+    },
+    {
+      "title": "Refactor",
+      "description": "StreamForm composition",
+      "userId": "115826235484677362723",
+      "id": 5
+    }
+  ]
+}
